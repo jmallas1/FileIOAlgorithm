@@ -1,17 +1,19 @@
 package org.jrm;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by mgreen14 on 12/29/17.
  */
 public class MealsArray {
-    private Meals[] meals = new Meals[100];
+    // private Meals[] meals = new Meals[100];
+    private ArrayList<Meals> meals = new ArrayList<>(100);
     private int i = 0;
     private int calories;
 
     public void addElementWithStrings(String arg1, String arg2, String arg3) {
         MealType mealType;
-        if (i < meals.length) {
-
             switch (arg1) {
                 case "Breakfast":
                     mealType = MealType.BREAKFAST;
@@ -36,14 +38,14 @@ public class MealsArray {
                 calories = 100;
                 System.out.println("Invalid Calories " + arg3 + ", defaulted to 100.");
             }
-            meals[i++] = new Meals(mealType, arg2, calories);
-        }
-        else {
-            System.out.println("Items exceeded system size.  File has " + i + ", while the system can only handle " + meals.length + ".");
-        }
+            // meals[i++] = new Meals(mealType, arg2, calories);
+            meals.add(new Meals(mealType, arg2, calories));
     }
 
-    public Meals[] getMeals() {
+    // public Meals[] getMeals() { return meals; }
+
+
+    public List getMeals() {
         return meals;
     }
 
