@@ -1,5 +1,6 @@
 package org.jrm;
 
+// TODO: replace arrays with ArrayLists here...
 
 import java.util.Scanner;
 
