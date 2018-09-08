@@ -1,7 +1,9 @@
 package org.jrm;
 
 /**
- * Created by mgreen14 on 12/29/17.
+ * Enumeration of meal types
+ * @author Matt Green
+ * @version 1.0
  */
 public enum MealType {
     BREAKFAST("Breakfast"), DESSERT("Dessert"), DINNER("Dinner"), LUNCH("Lunch");
