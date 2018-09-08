@@ -28,6 +28,7 @@ class MealsArrayTest {
     @Test
     void addElementWithStrings()
     {
+        // This was the only thing I touched so the only thing Im testing...
         ArrayList<Meals> meals = new ArrayList<>();
         meals.add(new Meals(org.jrm.MealType.BREAKFAST, "Bagel with cream cheese", 389));
 
@@ -35,21 +36,5 @@ class MealsArrayTest {
         ma.addElementWithStrings("Breakfast","Bagel with cream cheese","389");
 
         assertEquals(meals, ma.getMeals(), "Meal in should be meal out...");
-    }
-
-    @Test
-    void getMeals() {
-    }
-
-    @Test
-    void printAllMeals() {
-    }
-
-    @Test
-    void printMealsByType() {
-    }
-
-    @Test
-    void printByNameSearch() {
     }
 }

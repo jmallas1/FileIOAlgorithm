@@ -1,20 +1,28 @@
 package org.jrm;
 
-// TODO: replace arrays with ArrayLists here...
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Main class for demoing screen output
+ * @author mostly Matt Green, somewhat Jared Mallas
+ * @version 1.0
+ */
 public class Main {
 
     private final static FileInput indata = new FileInput("meals_data.csv");
     private static Scanner keyboard = new Scanner(System.in);
     private static MealsArray mealsArray = new MealsArray();
 
+    /**
+     * Main class for demoing mealLists and such
+     * @param args String arguments to this program... go ahead and pass some.
+     */
     public static void main(String[] args) {
         String line;
         // String[] fields;
-        ArrayList<String> ALFields = new ArrayList<>();
+        ArrayList<String> ALFields = new ArrayList<>(3);
+        int counter = 0;
 
         while ((line = indata.fileReadLine()) != null) {
             // fields = line.split(",");
@@ -24,6 +32,8 @@ public class Main {
 
             // mealsArray.addElementWithStrings(fields[0],fields[1],fields[2]);
             mealsArray.addElementWithStrings(ALFields.get(0),ALFields.get(1),ALFields.get(2));
+            // Because memory is cheap...
+            ALFields = new ArrayList<>();
         }
         runMenu();
     }
@@ -51,6 +61,7 @@ public class Main {
             }
         }
     }
+
     private static void listByMeal() {
         char ans;
         int ansNum=0;
