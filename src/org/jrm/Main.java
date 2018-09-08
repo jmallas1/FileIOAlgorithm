@@ -13,16 +13,17 @@ public class Main {
 
     public static void main(String[] args) {
         String line;
-        String[] fields;
+        // String[] fields;
         ArrayList<String> ALFields = new ArrayList<>();
 
         while ((line = indata.fileReadLine()) != null) {
-            fields = line.split(",");
+            // fields = line.split(",");
             for (String s : line.split(",")) {
                 ALFields.add(s);
             }
 
-            mealsArray.addElementWithStrings(fields[0],fields[1],fields[2]);
+            // mealsArray.addElementWithStrings(fields[0],fields[1],fields[2]);
+            mealsArray.addElementWithStrings(ALFields.get(0),ALFields.get(1),ALFields.get(2));
         }
         runMenu();
     }
