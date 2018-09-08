@@ -2,6 +2,7 @@ package org.jrm;
 
 // TODO: replace arrays with ArrayLists here...
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -13,9 +14,14 @@ public class Main {
     public static void main(String[] args) {
         String line;
         String[] fields;
+        ArrayList<String> ALFields = new ArrayList<>();
 
         while ((line = indata.fileReadLine()) != null) {
             fields = line.split(",");
+            for (String s : line.split(",")) {
+                ALFields.add(s);
+            }
+
             mealsArray.addElementWithStrings(fields[0],fields[1],fields[2]);
         }
         runMenu();
