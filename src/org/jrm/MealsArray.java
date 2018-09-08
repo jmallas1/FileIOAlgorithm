@@ -7,7 +7,7 @@ import java.util.List;
  * Created by mgreen14 on 12/29/17.
  */
 public class MealsArray {
-    // private Meals[] meals = new Meals[100];
+
     private ArrayList<Meals> meals = new ArrayList<>(100);
     private int i = 0;
     private int calories;
@@ -38,12 +38,9 @@ public class MealsArray {
                 calories = 100;
                 System.out.println("Invalid Calories " + arg3 + ", defaulted to 100.");
             }
-            // meals[i++] = new Meals(mealType, arg2, calories);
+
             meals.add(new Meals(mealType, arg2, calories));
     }
-
-    // public Meals[] getMeals() { return meals; }
-
 
     public List getMeals() {
         return meals;
